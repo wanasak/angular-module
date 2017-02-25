@@ -4,7 +4,12 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
     <app-title [subTitle]="subTitle"></app-title>
-    <app-contact></app-contact>
+    <nav>
+      <a routerLink="contact" routerActive="active">Contact</a>
+      <a routerLink="crisis" routerActive="active">Crisis Center</a>
+      <a routerLink="heroes" routerActive="active">Heroes</a>
+    </nav>
+    <router-outlet></router-outlet>
   `
 })
 export class AppComponent {
