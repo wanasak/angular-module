@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { UserService } from './user.service';
 
 @Component({
     moduleId: module.id,
@@ -8,4 +9,11 @@ import { Component, Input } from '@angular/core';
 export class TitleComponent {
     @Input() subTitle = '';
     title: String = 'Title';
+    user: String = '';
+
+    constructor( 
+        userService: UserService
+    ) {
+        this.user = userService.username;
+    }
 }

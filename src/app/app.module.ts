@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 
 import { TitleComponent } from './title.component';
 import { HighlightDirective } from './highlight.directive';
+import { UserService } from './user.service';
 
 @NgModule({
   imports: [BrowserModule],
@@ -12,6 +13,7 @@ import { HighlightDirective } from './highlight.directive';
     HighlightDirective,
     TitleComponent
   ],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
