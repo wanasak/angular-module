@@ -6,6 +6,9 @@ import { HeroComponent } from './hero.component';
 import { HeroDetailComponent } from './hero-detail.component';
 import { HeroListComponent } from './hero-list.component';
 
+// Don't import CoreModule outside the AppModule
+// import { CoreModule } from '../core/core.module';
+
 @NgModule({
     imports: [
         HeroRoutingModule,
