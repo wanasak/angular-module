@@ -3,12 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 /* App Root */
 import { AppComponent } from './app.component';
-import { TitleComponent } from './title.component';
-import { UserService } from './user.service';
 
 /* Feature Modules */
 import { ContactModule } from './contact/contact.module';
-import { SharedModule } from './shared/shared.module';
+import { CoreModule } from './core/core.module';
 
 /* Routing Module */
 import { AppRoutingModule } from './app-routing.module';
@@ -18,14 +16,10 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserModule,
     ContactModule,
     AppRoutingModule,
-    SharedModule
+    CoreModule.forRoot({ username: 'Wanasak' })
   ],
   declarations: [
-    AppComponent,
-    TitleComponent
-  ],
-  providers: [
-    UserService
+    AppComponent
   ],
   bootstrap: [AppComponent]
 })
