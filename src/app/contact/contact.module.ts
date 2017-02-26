@@ -2,9 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ContactRoutingModule } from './contact-routing.module';
+import { SharedModule } from '../shared/shared.module';
 
-import { AwesomePipe } from './awesome.pipe';
-import { HighlightDirective } from './highlight.directive';
 import { ContactServie } from './contact.service';
 import { ContactComponent } from './contact.component';
 
@@ -12,12 +11,11 @@ import { ContactComponent } from './contact.component';
     imports: [
         CommonModule,
         FormsModule,
-        ContactRoutingModule
+        ContactRoutingModule,
+        SharedModule
     ],
     declarations: [
-        ContactComponent,
-        HighlightDirective,
-        AwesomePipe
+        ContactComponent
     ],
     // exports: [ContactComponent],
     providers: [ContactServie]

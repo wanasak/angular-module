@@ -1,10 +1,11 @@
 import { Directive, ElementRef } from '@angular/core';
 
 @Directive({
-    selector: '[highlight], input'
+    selector: '[highlight]'
 })
+
 export class HighlightDirective {
     constructor(el: ElementRef) {
-        el.nativeElement.style.backgroundColor = 'green';
+        el.nativeElement.style.backgroundColor = 'pink';
     }
 }

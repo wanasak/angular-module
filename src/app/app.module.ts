@@ -4,11 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 /* App Root */
 import { AppComponent } from './app.component';
 import { TitleComponent } from './title.component';
-import { HighlightDirective } from './highlight.directive';
 import { UserService } from './user.service';
 
 /* Feature Modules */
 import { ContactModule } from './contact/contact.module';
+import { SharedModule } from './shared/shared.module';
 
 /* Routing Module */
 import { AppRoutingModule } from './app-routing.module';
@@ -17,11 +17,11 @@ import { AppRoutingModule } from './app-routing.module';
   imports: [
     BrowserModule,
     ContactModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule
   ],
   declarations: [
     AppComponent,
-    HighlightDirective,
     TitleComponent
   ],
   providers: [
